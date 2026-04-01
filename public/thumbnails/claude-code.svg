@@ -1,0 +1,18 @@
+<svg width="640" height="360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1030"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg)"/>
+  <circle cx="520" cy="80" r="120" fill="#7c3aed" opacity="0.08"/>
+  <circle cx="120" cy="300" r="80" fill="#06b6d4" opacity="0.06"/>
+  <rect x="40" y="310" width="80" height="4" rx="2" fill="url(#accent)"/>
+  <text x="320" y="160" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="38" font-weight="bold" fill="#e8eaf6">Claude Code</text>
+  <text x="320" y="210" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="18" fill="#9ca3c2">AI駆動開発 実践講座</text>
+</svg>
