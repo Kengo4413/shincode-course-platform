@@ -1,0 +1,167 @@
+<mxfile host="app.diagrams.net" agent="Claude Code" version="1.0">
+  <diagram id="system-architecture" name="システム構成図">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="user_group" value="&#x1f464; &#x8996;&#x8074;&#x8005;&#xff08;&#x30e6;&#x30fc;&#x30b6;&#x30fc;&#xff09;" style="swimlane;startSize=30;fillColor=#E3F2FD;strokeColor=#1565C0;strokeWidth=2;rounded=1;fontSize=14;fontStyle=1;swimlaneLine=0;" vertex="1" parent="1">
+          <mxGeometry x="660" y="20" width="280" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="browser" value="&#x1f310; Web&#x30d6;&#x30e9;&#x30a6;&#x30b6;&#10;&#xff08;&#x30b9;&#x30de;&#x30db; / PC&#xff09;" style="rounded=1;whiteSpace=wrap;fillColor=#BBDEFB;strokeColor=#1565C0;fontSize=12;" vertex="1" parent="user_group">
+          <mxGeometry x="60" y="40" width="160" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="nextjs_group" value="&#x26a1; Next.js 16&#xff08;&#x30a2;&#x30d7;&#x30ea;&#x672c;&#x4f53;&#xff09;&#x2014; Vercel &#x3067;&#x30c7;&#x30d7;&#x30ed;&#x30a4;" style="swimlane;startSize=35;fillColor=#FFF3E0;strokeColor=#E65100;strokeWidth=2;rounded=1;fontSize=14;fontStyle=1;swimlaneLine=0;" vertex="1" parent="1">
+          <mxGeometry x="120" y="200" width="1360" height="340" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="public_group" value="&#x1f4fa; &#x516c;&#x958b;&#x30da;&#x30fc;&#x30b8;&#xff08;&#x307f;&#x3093;&#x306a;&#x304c;&#x898b;&#x308b;&#x753b;&#x9762;&#xff09;" style="swimlane;startSize=28;fillColor=#FFFDE7;strokeColor=#F9A825;rounded=1;fontSize=12;fontStyle=1;swimlaneLine=0;" vertex="1" parent="nextjs_group">
+          <mxGeometry x="20" y="50" width="520" height="270" as="geometry"/>
+        </mxCell>
+        <mxCell id="toppage" value="&#x1f3e0; &#x30c8;&#x30c3;&#x30d7;&#x30da;&#x30fc;&#x30b8;&#10;&#x30b3;&#x30fc;&#x30b9;&#x4e00;&#x89a7;" style="rounded=1;whiteSpace=wrap;fillColor=#FFF9C4;strokeColor=#F9A825;fontSize=11;" vertex="1" parent="public_group">
+          <mxGeometry x="20" y="40" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="course_detail" value="&#x1f4cb; &#x30b3;&#x30fc;&#x30b9;&#x8a73;&#x7d30;&#10;&#x30ec;&#x30c3;&#x30b9;&#x30f3;&#x4e00;&#x89a7;&#10;+ &#x9032;&#x6357;&#x30d0;&#x30fc;" style="rounded=1;whiteSpace=wrap;fillColor=#FFF9C4;strokeColor=#F9A825;fontSize=11;" vertex="1" parent="public_group">
+          <mxGeometry x="190" y="40" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="lesson_page" value="&#x1f3ac; &#x30ec;&#x30c3;&#x30b9;&#x30f3;&#x30da;&#x30fc;&#x30b8;&#10;YouTube&#x52d5;&#x753b;&#x30d7;&#x30ec;&#x30fc;&#x30e4;&#x30fc;&#10;+ &#x8996;&#x8074;&#x5b8c;&#x4e86;&#x30dc;&#x30bf;&#x30f3;" style="rounded=1;whiteSpace=wrap;fillColor=#FFF9C4;strokeColor=#F9A825;fontSize=11;" vertex="1" parent="public_group">
+          <mxGeometry x="360" y="40" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="viewer_modal" value="&#x1f4dd; &#x521d;&#x56de;&#x767b;&#x9332;&#x30e2;&#x30fc;&#x30c0;&#x30eb;&#10;&#x540d;&#x524d;&#x30fb;&#x30e1;&#x30fc;&#x30eb;&#x3092;&#x5165;&#x529b;" style="rounded=1;whiteSpace=wrap;fillColor=#FFF9C4;strokeColor=#F9A825;fontSize=11;" vertex="1" parent="public_group">
+          <mxGeometry x="120" y="140" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="modal_note" value="viewer_id &#x3092;&#10;localStorage &#x306b;&#x4fdd;&#x5b58;" style="text;fontSize=10;fontColor=#888888;align=center;" vertex="1" parent="public_group">
+          <mxGeometry x="120" y="195" width="160" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="arrow_top_course" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#F9A825;" edge="1" source="toppage" target="course_detail" parent="public_group">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow_course_lesson" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#F9A825;" edge="1" source="course_detail" target="lesson_page" parent="public_group">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="admin_group" value="&#x1f527; &#x7ba1;&#x7406;&#x753b;&#x9762;&#xff08;&#x904b;&#x55b6;&#x8005;&#x7528;&#x30fb;&#x6e96;&#x5099;&#x4e2d;&#xff09;" style="swimlane;startSize=28;fillColor=#ECEFF1;strokeColor=#78909C;rounded=1;fontSize=12;fontStyle=1;dashed=1;swimlaneLine=0;" vertex="1" parent="nextjs_group">
+          <mxGeometry x="560" y="50" width="340" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="dashboard" value="&#x1f4ca; &#x30c0;&#x30c3;&#x30b7;&#x30e5;&#x30dc;&#x30fc;&#x30c9;" style="rounded=1;whiteSpace=wrap;fillColor=#CFD8DC;strokeColor=#78909C;fontSize=11;" vertex="1" parent="admin_group">
+          <mxGeometry x="15" y="40" width="90" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="analytics" value="&#x1f4c8; &#x30a2;&#x30af;&#x30bb;&#x30b9;&#x89e3;&#x6790;" style="rounded=1;whiteSpace=wrap;fillColor=#CFD8DC;strokeColor=#78909C;fontSize=11;" vertex="1" parent="admin_group">
+          <mxGeometry x="125" y="40" width="90" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="viewer_mgmt" value="&#x1f465; &#x8996;&#x8074;&#x8005;&#x7ba1;&#x7406;" style="rounded=1;whiteSpace=wrap;fillColor=#CFD8DC;strokeColor=#78909C;fontSize=11;" vertex="1" parent="admin_group">
+          <mxGeometry x="235" y="40" width="90" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="admin_coming" value="&#x203b; Coming Soon" style="text;fontSize=10;fontColor=#999999;fontStyle=2;align=center;" vertex="1" parent="admin_group">
+          <mxGeometry x="100" y="90" width="140" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="backend_group" value="&#x2699;&#xfe0f; &#x30d0;&#x30c3;&#x30af;&#x30a8;&#x30f3;&#x30c9;&#x51e6;&#x7406;" style="swimlane;startSize=28;fillColor=#FBE9E7;strokeColor=#BF360C;rounded=1;fontSize=12;fontStyle=1;swimlaneLine=0;" vertex="1" parent="nextjs_group">
+          <mxGeometry x="560" y="195" width="780" height="125" as="geometry"/>
+        </mxCell>
+        <mxCell id="server_actions" value="&#x1f504; Server Actions&#10;&#x8996;&#x8074;&#x5b8c;&#x4e86;&#x306e;&#x8a18;&#x9332;" style="rounded=1;whiteSpace=wrap;fillColor=#FFCCBC;strokeColor=#BF360C;fontSize=11;" vertex="1" parent="backend_group">
+          <mxGeometry x="20" y="40" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="api" value="&#x1f4e1; API /api/progress&#10;GET: &#x9032;&#x6357;&#x53d6;&#x5f97;&#10;POST: &#x9032;&#x6357;&#x8a18;&#x9332;" style="rounded=1;whiteSpace=wrap;fillColor=#FFCCBC;strokeColor=#BF360C;fontSize=11;" vertex="1" parent="backend_group">
+          <mxGeometry x="260" y="40" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="course_data" value="&#x1f4c2; courses.ts&#10;&#x5168;&#x30b3;&#x30fc;&#x30b9;&#x30c7;&#x30fc;&#x30bf;&#xff08;&#x9759;&#x7684;&#xff09;&#10;11&#x30b3;&#x30fc;&#x30b9; / 120+ &#x30ec;&#x30c3;&#x30b9;&#x30f3;" style="rounded=1;whiteSpace=wrap;fillColor=#FFCCBC;strokeColor=#BF360C;fontSize=11;" vertex="1" parent="backend_group">
+          <mxGeometry x="510" y="40" width="240" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="supabase_group" value="&#x1f5c4;&#xfe0f; Supabase&#xff08;&#x30c7;&#x30fc;&#x30bf;&#x30d9;&#x30fc;&#x30b9;&#xff09;" style="swimlane;startSize=30;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;rounded=1;fontSize=14;fontStyle=1;swimlaneLine=0;" vertex="1" parent="1">
+          <mxGeometry x="220" y="630" width="560" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="viewers_table" value="&#x1f464; viewers &#x30c6;&#x30fc;&#x30d6;&#x30eb;&#10;id (UUID) / name / email&#10;created_at" style="shape=cylinder3;whiteSpace=wrap;fillColor=#C8E6C9;strokeColor=#2E7D32;fontSize=11;size=10;" vertex="1" parent="supabase_group">
+          <mxGeometry x="40" y="50" width="200" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="progress_table" value="&#x1f4ca; progress &#x30c6;&#x30fc;&#x30d6;&#x30eb;&#10;viewer_id / course_id&#10;lesson_id / watched_at" style="shape=cylinder3;whiteSpace=wrap;fillColor=#C8E6C9;strokeColor=#2E7D32;fontSize=11;size=10;" vertex="1" parent="supabase_group">
+          <mxGeometry x="310" y="50" width="210" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="fk_arrow" value="&#x5916;&#x90e8;&#x30ad;&#x30fc;&#x53c2;&#x7167;" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#2E7D32;fontSize=10;" edge="1" source="progress_table" target="viewers_table" parent="supabase_group">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="youtube_group" value="&#x1f534; YouTube&#xff08;&#x52d5;&#x753b;&#x30db;&#x30b9;&#x30c6;&#x30a3;&#x30f3;&#x30b0;&#xff09;" style="swimlane;startSize=30;fillColor=#FFEBEE;strokeColor=#C62828;strokeWidth=2;rounded=1;fontSize=14;fontStyle=1;swimlaneLine=0;" vertex="1" parent="1">
+          <mxGeometry x="920" y="630" width="450" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="videos" value="&#x1f3a5; &#x6559;&#x80b2;&#x52d5;&#x753b;&#x30b3;&#x30f3;&#x30c6;&#x30f3;&#x30c4;&#10;Claude Code / Next.js / TypeScript&#10;React Native / Tailwind / API &#x306a;&#x3069;" style="rounded=1;whiteSpace=wrap;fillColor=#FFCDD2;strokeColor=#C62828;fontSize=11;" vertex="1" parent="youtube_group">
+          <mxGeometry x="80" y="50" width="290" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge_user_top" value="&#x2460; &#x30b5;&#x30a4;&#x30c8;&#x306b;&#x30a2;&#x30af;&#x30bb;&#x30b9;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#1565C0;strokeWidth=2;fontSize=11;" edge="1" source="browser" target="toppage" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="170"/>
+              <mxPoint x="230" y="170"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge_lesson_video" value="&#x52d5;&#x753b;&#x3092;&#x57cb;&#x3081;&#x8fbc;&#x307f;&#x8868;&#x793a;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#C62828;strokeWidth=2;fontSize=11;" edge="1" source="lesson_page" target="videos" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="560"/>
+              <mxPoint x="620" y="590"/>
+              <mxPoint x="1145" y="590"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge_lesson_action" value="&#x8996;&#x8074;&#x5b8c;&#x4e86;&#x30dc;&#x30bf;&#x30f3;&#x62bc;&#x4e0b;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#BF360C;strokeWidth=1;fontSize=10;" edge="1" source="lesson_page" target="server_actions" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="570" y="340"/>
+              <mxPoint x="570" y="460"/>
+              <mxPoint x="800" y="460"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge_action_progress" value="&#x9032;&#x6357;&#x3092;&#x66f8;&#x304d;&#x8fbc;&#x307f;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#2E7D32;strokeWidth=2;fontSize=10;" edge="1" source="server_actions" target="progress_table" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge_api_progress" value="&#x9032;&#x6357;&#x3092;&#x8aad;&#x307f;&#x53d6;&#x308a;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#2E7D32;strokeWidth=2;fontSize=10;" edge="1" source="api" target="progress_table" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge_modal_viewers" value="&#x30e6;&#x30fc;&#x30b6;&#x30fc;&#x767b;&#x9332;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#2E7D32;strokeWidth=2;fontSize=10;" edge="1" source="viewer_modal" target="viewers_table" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="560"/>
+              <mxPoint x="340" y="600"/>
+              <mxPoint x="460" y="600"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge_course_api" value="&#x9032;&#x6357;&#x30c7;&#x30fc;&#x30bf;&#x53d6;&#x5f97;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#BF360C;strokeWidth=1;fontSize=10;" edge="1" source="course_detail" target="api" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="340"/>
+              <mxPoint x="550" y="470"/>
+              <mxPoint x="1020" y="470"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge_top_coursedata" value="&#x30b3;&#x30fc;&#x30b9;&#x60c5;&#x5831;&#x53d6;&#x5f97;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#BF360C;strokeWidth=1;fontSize=10;" edge="1" source="toppage" target="course_data" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="480"/>
+              <mxPoint x="1290" y="480"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="title" value="ShinCode Course Platform &#x30b7;&#x30b9;&#x30c6;&#x30e0;&#x69cb;&#x6210;&#x56f3;" style="text;fontSize=20;fontStyle=1;fontColor=#333333;align=center;" vertex="1" parent="1">
+          <mxGeometry x="520" y="850" width="560" height="40" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
